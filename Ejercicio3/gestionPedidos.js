@@ -51,12 +51,12 @@ class Pedido {
         this.estado = estado;
     }
 }
-let producto1 = new Producto("Manzana", 1.5, 100, 0.1);
-let producto2 = new Producto("Televisión", 500, 20, 0.21);
+let producto1 = new Producto("Celular", 1500000, 100, 0.17);
+let producto2 = new Producto("Televisión", 2000000, 20, 0.21);
 
-let tarjeta = new TarjetaCredito("Crédito", "12/25", "1234567890123456");
-let efectivo = new Efectivo("Efectivo", "EUR");
-let cheque = new Cheque("Cheque", "Juan Pérez", "Banco XYZ");
+let tarjeta = new TarjetaCredito("Crédito", "12/26", "1234567890");
+let efectivo = new Efectivo("Efectivo", "Pesos Colombianos");
+let cheque = new Cheque("Cheque", "Juan Pérez", "Banco Parabens");
 
 let pedido1 = new Pedido(new Date());
 pedido1.agregarProducto(producto1, 5);
