@@ -17,7 +17,7 @@ class Matrimonio {
         this.lugarCelebracion = lugarCelebracion;
         this.pareja = [];
         this.testigos = [];
-        this.juez = null;
+        juez = new Persona;
     }
     asignarJuez(persona) {
         this.juez = persona;
