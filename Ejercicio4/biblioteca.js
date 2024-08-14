@@ -45,13 +45,15 @@ class Lector {
         }
     }
     devolverLibro(libro) {
-        if (this.prestamos.includes(libro)) {
-            this.prestamos = this.prestamos.filter(l => l !== libro);
-            libro.cambiarEstado('disponible');
-            console.log(`${this.nombre} ${this.apellidos} ha devuelto el libro: "${libro.titulo}"`);
-        } else {
-            console.log(`${this.nombre} ${this.apellidos} no tiene prestado el libro: "${libro.titulo}"`);
+        for (let i = 0; i < this.prestamos.length; i++) {
+            if (this.prestamos[i] === libro) {
+                this.prestamos.splice(i, 1);
+                libro.cambiarEstado('disponible');
+                console.log(`${this.nombre} ${this.apellidos} ha devuelto el libro: "${libro.titulo}"`);
+                return;
+            }
         }
+        console.log(`${this.nombre} ${this.apellidos} no tiene prestado el libro: "${libro.titulo}"`);
     }
 }
 let listaAutores = [];
