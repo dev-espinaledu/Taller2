@@ -49,7 +49,6 @@ class Pago {
         this.pedido = null;
         this.numeroGuia = this.generarNumeroGuia();
     }
-
     generarNumeroGuia() {
         // completar
     }
