@@ -29,23 +29,10 @@ class Lector {
         this.prestamos = [];
     }
     prestarLibro(libro) {
-        if (libro.existenciaStock()) {
-            this.prestamos.push(libro);
-            libro.estado = 'prestado';
-            console.log(`Libro ${libro.titulo} prestado a ${this.nombre} ${this.apellidos}`);
-        } else {
-            console.log(`El libro ${libro.titulo} no está disponible`);
-        }
+        // completar
     }
     devolverLibro(libro) {
-        const index = this.prestamos.indexOf(libro);
-        if (index !== -1) {
-            this.prestamos.splice(index, 1);
-            libro.estado = 'disponible';
-            console.log(`Libro ${libro.titulo} devuelto por ${this.nombre} ${this.apellidos}`);
-        } else {
-            console.log(`El lector no tiene prestado el libro ${libro.titulo}`);
-        }
+        // completar
     }
 }
 let autor1 = new Autor("Karl Feige", "Colombia", "06-12-1980");

@@ -29,25 +29,7 @@ class Matrimonio {
         this.pareja = personas;
     }
     informacionMatrimonio() {
-        let info = `Fecha: ${this.fecha}, Lugar: ${this.lugarCelebracion}\n`;
-
-        if (this.pareja.length > 0) {
-            info += "Contrayentes:\n";
-            for (let contrayente of this.pareja) {
-                info += `${contrayente.nombre} ${contrayente.apellidos}\n`;
-            }
-        }
-        if (this.testigos.length > 0) {
-            info += "Testigos:\n";
-            for (let testigo of this.testigos) {
-                info += `${testigo.nombre} ${testigo.apellidos}\n`;
-            }
-        }
-        if (this.juez) {
-            info += `Juez: ${this.juez.nombre} ${this.juez.apellidos}\n`;
-        }
-        console.log("Información del matrimonio:");
-        return info;
+        // completar
     }
 }
 let persona1 = new Persona("Johan", "Muñoz", 34, "M", "Calle Vendeta 1102", "Novio");
@@ -58,7 +40,5 @@ let juez = new Persona("Karol", "Martínez", 50, "M", "Calle Olimpo 142", "Juez"
 
 let matrimonio = new Matrimonio("12/08/2024", "Parque Lexivius");
 matrimonio.asignarJuez(juez);
-matrimonio.asignarContrayentes([persona1, persona2]);
-matrimonio.asignarJurado([testigo1, testigo2]);
 
 console.log(matrimonio.informacionMatrimonio());
