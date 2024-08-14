@@ -1,54 +1,56 @@
 class Producto {
-    constructor(nombre, precio, stock, impuestos) {
+    constructor(nombre, precio, cantidad, impuestos) {
         this.nombre = nombre;
         this.precio = precio;
-        this.stock = stock;
+        this.cantidad = cantidad;
         this.impuestos = impuestos;
     }
-}
-class FormaPago {
-    constructor(tipo) {
-        this.tipo = tipo;
+    existenciaStock() {
+        // completer
     }
-}
-class TarjetaCredito extends FormaPago {
-    constructor(tipo, fechaCaducidad, numero) {
-        super(tipo);
-        this.fechaCaducidad = fechaCaducidad;
-        this.numero = numero;
-    }
-}
-class Efectivo extends FormaPago {
-    constructor(tipo, moneda) {
-        super(tipo);
-        this.moneda = moneda;
-    }
-}
-class Cheque extends FormaPago {
-    constructor(tipo, nombre, entidadBancaria) {
-        super(tipo);
-        this.nombre = nombre;
-        this.entidadBancaria = entidadBancaria;
+    agregarProducto() {
+        // completar
     }
 }
 class Pedido {
     constructor(fecha) {
         this.fecha = fecha;
-        this.productos = [];
+        this.productos = []
         this.formaPago = null;
         this.estado = "pendiente";
     }
-    agregarProducto(producto, cantidad) {
-        this.productos.push({producto, cantidad});
-    }
-    calcularTotal() {
+    calcularCostoTotal() {
         // Completar
     }
-    setFormaPago(formaPago) {
-        this.formaPago = formaPago;
+}
+class Pago {
+    constructor(precio) {
+        this.precio = precio;
+        this.pedido = []
+        numeroGuia = new Pedido;
     }
-    setEstado(estado) {
-        this.estado = estado;
+    pagarPedido() {
+        // completar
+    }
+    metodosPago() {
+        // completar
+    }
+}
+class TarjetaCredito extends Pago {
+    constructor(fechaCaducidad, numero) {
+        this.fechaCaducidad = fechaCaducidad;
+        this.numero = numero;
+    }
+}
+class Efectivo extends Pago {
+    constructor(moneda) {
+        this.moneda = moneda;
+    }
+}
+class Cheque extends Pago {
+    constructor(nombre, entidadBancaria) {
+        this.nombre = nombre;
+        this.entidadBancaria = entidadBancaria;
     }
 }
 let producto1 = new Producto("Celular", 1500000, 100, 0.17);
